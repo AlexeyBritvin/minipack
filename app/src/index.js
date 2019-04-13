@@ -7,8 +7,9 @@ export class App {
   constructor() {}
 
   render(parent, renderedElement) {
-    parent.appendChild(renderedElement);
+    parent.insertAdjacentHTML('beforeend', renderedElement);
   }
 }
+const app = new App();
 
-document.body.addEventListener('loadend', () => App.render(mainElement, appComponent(appConfig.title)));
+app.render(mainElement, appComponent(appConfig.title));
