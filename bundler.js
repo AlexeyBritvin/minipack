@@ -90,7 +90,17 @@ function bundle(graph) {
   return result;
 }
 
+function createResultedFile(fileContent) {
+  process.chdir('./app');
+  fs.writeFile('bundle.js', fileContent, onError);
+}
+
+function onError(err) {
+  if (err) {
+    throw err;
+  }
+}
+
 const graph = createGraph(entryFile);
 const result = bundle(graph);
-
-console.log(result);
+createResultedFile(result);
