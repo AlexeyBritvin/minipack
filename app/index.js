@@ -1,5 +1,5 @@
-import {appComponent} from './components/app-component';
-import {appConfig} from './config';
+import {appComponent} from './components/app-component.js';
+import {appConfig} from './config.js';
 
 const mainElement = document.querySelector('.app');
 
