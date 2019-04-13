@@ -15,7 +15,8 @@
     "eslint-config-yandex": "^1.0.6"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "node bundler.js"
   },
   "repository": {
     "type": "git",

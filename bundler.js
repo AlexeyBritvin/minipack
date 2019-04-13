@@ -3,6 +3,7 @@ const path = require('path');
 const babylon = require('babylon');
 const babel = require('babel-core');
 const traverse = require('babel-traverse').default;
+const entryFile = process.argv[2];
 
 let ID = 0;
 
@@ -89,7 +90,7 @@ function bundle(graph) {
   return result;
 }
 
-const graph = createGraph('./app/src/index.js');
+const graph = createGraph(entryFile);
 const result = bundle(graph);
 
 console.log(result);
